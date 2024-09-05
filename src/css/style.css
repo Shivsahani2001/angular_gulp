@@ -1,0 +1,144 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Main container */
+.main {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Add item container */
+.addItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.addText {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Items list styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.li {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.li:nth-child(even) {
+  background-color: #eef2f7;
+}
+
+span {
+  background-color: #ff5c5c;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+span:hover {
+  background-color: #e53e3e;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .addItem {
+    flex-direction: column;
+  }
+
+  .addText {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    width: 95%;
+    padding: 15px;
+  }
+
+  button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .addText {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+}

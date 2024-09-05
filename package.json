@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "angular": "^1.8.3",
+    "angular-route": "^1.8.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "gulp": "^5.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify-html": "^1.0.6"
+  },
+  "name": "angular_app",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
