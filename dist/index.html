@@ -7,19 +7,52 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <div class="main" ng-app="myList" ng-controller="myListController">
-      <h1>Item's List..</h1>
-      <div class="addItem">
-        <input placeholder="Add Item" ng-model="newItem" class="addText" />
-        <button ng-click="pushItem()">Add</button>
+    <div
+      class="container mt-5"
+      ng-app="myList"
+      ng-controller="myListController"
+    >
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+          <h1 class="mb-4 text-primary">Item's List</h1>
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              placeholder="Add Item"
+              ng-model="newItem"
+              class="form-control"
+            />
+            <button
+              ng-click="pushItem()"
+              class="btn btn-outline-primary"
+              type="button"
+            >
+              Add
+            </button>
+          </div>
+
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-secondary">
+              {{newItem}}
+            </li>
+            <li
+              ng-repeat="i in items"
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              {{i}}
+              <button
+                ng-click="deleteItems($index)"
+                class="btn btn-outline-danger btn-sm"
+                aria-label="Close"
+              >
+                Remove
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
-      <ul>
-        <li ng-repeat="i in items" class="li">
-          {{i}} <span ng-click="deleteItems($index)">x</span>
-        </li>
-      </ul>
     </div>
+
     <script src="js/scripts.js"></script>
-  </body>
   </body>
 </html>
